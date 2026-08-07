@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduLab - Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    /* NAVBAR */
+    .navbar { background: #f5f0f5; padding: 12px 40px; }
+    .navbar-brand { font-weight: 800; font-size: 1.1rem; color: #1e1b4b !important; }
+    .logo-box {
+      width: 30px; height: 30px; background: #7c3aed;
+      border-radius: 7px; display: inline-flex;
+      align-items: center; justify-content: center; margin-right: 6px;
+    }
+    .logo-box svg { width: 18px; height: 18px; fill: white; }
+    .nav-link { font-weight: 600; font-size: 0.85rem; color: #1e1b4b !important; letter-spacing: 0.04em; }
+    .nav-link:hover, .nav-link.active { color: #7c3aed !important; }
+    .btn-login { font-weight: 700; font-size: 0.9rem; color: #1e1b4b; text-decoration: none; }
+    .btn-signup {
+      background: #7c3aed; color: white !important; font-weight: 700;
+      font-size: 0.9rem; padding: 8px 22px; border-radius: 6px; text-decoration: none;
+    }
+    .btn-signup:hover { background: #6d28d9; }
+
+    /* HERO */
+    .contact-hero {
+      background: linear-gradient(135deg, #d1e8d5 0%, #a8c5ae 100%);
+      padding: 60px 40px;
+    }
+    .contact-hero h1 { font-size: 2.2rem; font-weight: 800; color: #1e1b4b; }
+    .contact-hero p { color: #374151; font-size: 0.95rem; line-height: 1.7; }
+
+    /* INFO CARDS */
+    .info-card {
+      background: #f9f9f9; border-radius: 14px;
+      padding: 28px 20px; text-align: center;
+      transition: transform 0.2s; border: none;
+    }
+    .info-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(124,58,237,0.1); }
+    .icon-circle {
+      width: 52px; height: 52px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px; font-size: 1.3rem;
+    }
+    .ic-pink   { background: #fce7f3; }
+    .ic-purple { background: #ede9fe; }
+    .ic-teal   { background: #ccfbf1; }
+    .ic-gold   { background: #fef3c7; }
+    .info-card h6 { font-weight: 700; color: #1e1b4b; }
+    .info-card p  { font-size: 0.83rem; color: #6b7280; margin: 0; }
+
+    /* CONTACT SECTION */
+    .contact-section { background: #f5f0f5; }
+
+    /* TOUCH DETAILS */
+    .touch-icon {
+      width: 42px; height: 42px; background: #7c3aed;
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; color: white; font-size: 1rem; flex-shrink: 0;
+    }
+    .touch-text strong { font-size: 0.9rem; color: #1e1b4b; display: block; }
+    .touch-text span   { font-size: 0.83rem; color: #6b7280; }
+
+    /* FORM CARD */
+    .form-card {
+      background: white; border-radius: 18px; padding: 36px 32px;
+      box-shadow: 0 6px 28px rgba(124,58,237,0.08);
+    }
+    .form-card h5 { font-weight: 700; color: #1e1b4b; }
+    .form-card .sub { font-size: 0.83rem; color: #6b7280; }
+    .form-control, .form-select {
+      border: 1.5px solid #e5e7eb; border-radius: 8px;
+      font-family: 'Poppins', sans-serif; font-size: 0.88rem;
+      background: #fafafa; color: #1e1b4b;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: #7c3aed;
+      box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+      background: white;
+    }
+    .form-label { font-size: 0.85rem; font-weight: 600; color: #1e1b4b; }
+    .btn-send {
+      background: #7c3aed; color: white; font-family: 'Poppins', sans-serif;
+      font-weight: 700; font-size: 0.95rem; padding: 12px;
+      border-radius: 8px; border: none; width: 100%;
+      letter-spacing: 0.04em; transition: background 0.2s;
+    }
+    .btn-send:hover { background: #6d28d9; }
+
+    /* MAP */
+    .map-box {
+      background: linear-gradient(135deg, #e9d5ff, #c7d2fe);
+      border-radius: 16px; height: 260px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 10px;
+    }
+    .map-pin { font-size: 2.8rem; animation: bounce 1.5s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    .map-label {
+      background: white; border-radius: 20px; padding: 6px 18px;
+      font-size: 0.82rem; font-weight: 600; color: #7c3aed;
+    }
+
+    /* FOOTER */
+    footer { background: #1e1b4b; color: #c4b5fd; font-size: 0.83rem; }
+    footer span { color: #a855f7; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg sticky-top">  
+        <div class="container  ">
+            <a class="navbar-brand" href="index.html"><i style="color: rgb(113, 20, 109); font-size: 25px;" class="fa-solid fa-graduation-cap"></i><span class="w-name">EDULAB</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link scale" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scale" href="aboutus.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item  scale">
+                        <a class="nav-link scale" href="course.html">COURSE</a>
+                    </li>
+                    <li class="nav-item scale">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-2 btns"> 
+                    <button class="btn log-btn  " type="button"><a href="login.html" style="text-decoration: none; color: black;">LOGIN</a></button>
+                     <button class="btn sign-btn" type="button"><a href="signup.html" style="text-decoration: none; color: white;">SIGN UP</a></button>
+
+                </div>
+                    
+                
+                
+            </div>
+        </div>
+    </nav>
+
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <h1>Contact <span style="color:#7c3aed">Us</span></h1>
+        </div>
+        <div class="col-md-8">
+          <p class="mb-0">We're here to help you with your learning journey. Whether you have questions about courses, need support, or just want to say hello — our team will respond promptly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO CARDS -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="info-card">
+            <div class="icon-circle ic-pink">📍</div>
+            <h6>Our Location</h6>
+            <p>123 EduLab Street,<br/>Learning City, ED 45678</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="info-card">
+            <div class="icon-circle ic-purple">📞</div>
+            <h6>Phone Number</h6>
+            <p>+1 (800) 123-4567<br/>Mon – Fri, 9am – 6pm</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="info-card">
+            <div class="icon-circle ic-teal">✉️</div>
+            <h6>Email Address</h6>
+            <p>support@edulab.com<br/>info@edulab.com</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="info-card">
+            <div class="icon-circle ic-gold">🕒</div>
+            <h6>Working Hours</h6>
+            <p>Mon – Fri: 9am – 6pm<br/>Sat: 10am – 4pm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET IN TOUCH -->
+  <section class="contact-section py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+
+        <!-- Left details -->
+        <div class="col-lg-5">
+          <h2 style="font-weight:800;color:#1e1b4b">Get In <span style="color:#7c3aed">Touch</span><br/>With Us</h2>
+          <p class="mt-3 mb-4" style="color:#374151;font-size:0.92rem;line-height:1.7">
+            Have a question or need help choosing the right course? Fill out the form and our advisors will respond within 24 hours.
+          </p>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <div class="touch-icon">📍</div>
+            <div class="touch-text">
+              <strong>Visit Us</strong>
+              <span>123 EduLab Street, Learning City, ED 45678</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <div class="touch-icon">📞</div>
+            <div class="touch-text">
+              <strong>Call Us</strong>
+              <span>+1 (800) 123-4567</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start gap-3 mb-3">
+            <div class="touch-icon">✉️</div>
+            <div class="touch-text">
+              <strong>Email Us</strong>
+              <span>support@edulab.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-7">
+          <div class="form-card">
+            <h5 class="mb-1">Send Us a Message</h5>
+            <p class="sub mb-4">We'll get back to you within 24 hours.</p>
+
+            <div class="row g-3">
+              <div class="col-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="John"/>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Doe"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+1 (000) 000-0000"/>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Course Interest</label>
+                <select class="form-select">
+                  <option disabled selected>Select a course</option>
+                  <option>Python Full Stack</option>
+                  <option>Web Development</option>
+                  <option>Data Science</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Your Message</label>
+                <textarea class="form-control" rows="4" placeholder="Write your message here..."></textarea>
+              </div>
+              <div class="col-12">
+                <button class="btn-send">Send Message ➤</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h5 class="fw-bold mb-3" style="color:#1e1b4b">Find Us Here</h5>
+      <div class="map-box">
+        <span class="map-pin">📌</span>
+        <div class="map-label">EduLab HQ — Learning City</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4">
+    &copy; 2026 <span>EduLab</span>. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
