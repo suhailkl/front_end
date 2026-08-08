@@ -20,8 +20,8 @@
 <body>
 
     <!-- navbar section -->
-    <nav class="navbar navbar-expand-lg sticky-top">  
-        <div class="container  ">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
             <a class="navbar-brand" href="index.html"><i style="color: rgb(113, 20, 109); font-size: 25px;" class="fa-solid fa-graduation-cap"></i><span class="w-name">EDULAB</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -36,82 +36,74 @@
                     <li class="nav-item">
                         <a class="nav-link scale" href="aboutus.html">ABOUT</a>
                     </li>
-                    <li class="nav-item  scale">
+                    <li class="nav-item scale">
                         <a class="nav-link scale" href="course.html">COURSE</a>
                     </li>
                     <li class="nav-item scale">
                         <a class="nav-link" href="contacht.html">CONTACT</a>
                     </li>
                 </ul>
-                <div class="d-flex gap-2 bt
-                ns"> 
-                    <button class="btn log-btn  " type="button"><a href="login.html" style="text-decoration: none; color: black;">LOGIN</a></button>
-                     <button class="btn sign-btn" type="button"><a href="signup.html" style="text-decoration: none; color: white;">SIGN UP</a></button>
-
+                <div class="d-flex gap-2 btns">
+                    <button class="btn log-btn" type="button"><a href="login.html" style="text-decoration: none; color: black;">LOGIN</a></button>
+                    <button class="btn sign-btn" type="button"><a href="signup.html" style="text-decoration: none; color: white;">SIGN UP</a></button>
                 </div>
-                    
-                
-                
             </div>
         </div>
     </nav>
 
     <!-- hero section -->
-     <div class="container-fluid hero-body position-relative">
-        <p class="hero-p"><span class="">Smart Study</span> Where <br> Knowledge Meets <br>the Web</p>
-        <p class="hero-about">Smart learning starts here with the best online courses.
-            <br>Grow your skills and shape your future with us.</p>
-        <div class="position-absolute bottom-0 end-0 ">
-            <img src="./images/teacher.png" alt="" style="height: 425px; width: 300px;">
+    <div class="container-fluid hero-body">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-p"><span>Smart Study</span> Where <br>Knowledge Meets <br>the Web</p>
+                <p class="hero-about">Smart learning starts here with the best online courses.
+                    <br>Grow your skills and shape your future with us.</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Search Your Course Here">
+                    <button type="button">Search <i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./images/teacher.png" alt="Teacher illustration">
+            </div>
         </div>
 
-        <div class="search-container">
-            <input type="text" placeholder="Search Your Course Here">
-            <button>Search <i class="fa-regular fa-paper-plane"></i></button>
-        </div>
+        <section class="cards-hero">
+            <div class="card-hero">
+                <div class="icon red">📁</div>
+                <h2>134</h2>
+                <p>Our Online Course</p>
+            </div>
 
-  
+            <div class="card-hero">
+                <div class="icon blue">🎓</div>
+                <h2>299</h2>
+                <p>Academic Programs</p>
+            </div>
 
-    <!-- CARDS -->
-    <section class="cards-hero">
-        <div class="card-hero">
-            <div class="icon red">📁</div>
-            <h2>134</h2>
-            <p>Our Online Course</p>
-        </div>
+            <div class="card-hero">
+                <div class="icon purple">👥</div>
+                <h2>684</h2>
+                <p>Certified Students</p>
+            </div>
 
-        <div class="card-hero">
-            <div class="icon blue">🎓</div>
-            <h2>299</h2>
-            <p>Academic Programs</p>
-        </div>
+            <div class="card-hero">
+                <div class="icon green">👤</div>
+                <h2>941</h2>
+                <p>Enrolled Students</p>
+            </div>
+        </section>
+    </div>
 
-        <div class="card-hero">
-            <div class="icon purple">👥</div>
-            <h2>684</h2>
-            <p>Certified Students</p>
-        </div>
-
-        <div class="card-hero">
-            <div class="icon green">👤</div>
-            <h2>941</h2>
-            <p>Enrolled Students</p>
-        </div>
-    </section>
-     </div>
-
-    <div class="">
-           <div class="container-fluid d-flex justify-content-center align-items-center newdiv about-container">
+    <div class="about-intro">
         <h1 class="text-center fw-bold">Start Your Journey With Us</h1>
-        <p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of <br>learning
-            options and gain new skills! Our school is known for its innovative teaching methods and commitment to
+        <p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of
+            learning options and gain new skills! Our school is known for its innovative teaching methods and commitment to
             student success.</p>
     </div>
 
-    <!-- card -->
     <section class="about">
         <div class="card-about">
-
             <div class="about-card">
                 <div class="icon red">01</div>
                 <h3>Expert Teacher</h3>
@@ -135,26 +127,21 @@
                 <h3>Life Time Support</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur notted adipisicing elit ut labore.</p>
             </div>
-
         </div>
     </section>
 
-    <div class="container-fluid about-two p-5 d-flex justify-content-center align-item-center position-relative">
-        <div class="position-absolute top-0 start-0 p-3 ">
-            <img src="./images/teacher2.jpg" alt=""  class="img-fluid" style="height: 425px; width: 300px; padding-left:50px; object-fit: cover;" >
+    <div class="about-two">
+        <div class="about-two-image">
+            <img src="./images/teacher2.jpg" alt="Teacher illustration">
         </div>
-        <div class="position-absolute start-50  about-two-content text-white p-5">
-            <h1 class="fw-bold text-dark">We Are Providing The Online Course In Global World</h1>
-            <p class="text-dark">We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.
-
-                We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is know.</p>
+        <div class="about-two-content">
+            <h1 class="fw-bold">We Are Providing The Online Course In Global World</h1>
+            <p>We offer a brand new approach to the most basic learning paradigms. Choose from a wide range of learning options and gain new skills! Our school is known for its innovative teaching methods and commitment to student success.</p>
+            <button class="btn">VIEW COURSES</button>
         </div>
-        <div class="about-button position-absolute bottom-0  p-5">
-            <button class=" btn ">VIEW COURSES</button>
-        </div>
-
     </div>
-    <footer class="footer"> 
+
+    <footer class="footer">
         <div class="footer-container container-fluid">
             <div class="footer-link">
                 <a href="index.html" style="text-decoration: none;">Home</a>
@@ -163,7 +150,6 @@
                 <a href="contacht.html" style="text-decoration: none;">Contact</a>
             </div>
         </div>
-       
     </footer>
      
 
